@@ -1,5 +1,4 @@
 from flask import Flask
-
 from control.index import *
 
 app = Flask(__name__)
