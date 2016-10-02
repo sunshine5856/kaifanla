@@ -1,0 +1,5 @@
+SQLAlchemy
+flask
+pymongo
+redis
+hiredis
