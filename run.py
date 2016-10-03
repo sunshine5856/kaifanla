@@ -1,7 +1,5 @@
-from flask import Flask
-from control.index import *
-
-app = Flask(__name__)
+from control import *
+from bin import app
 
 if __name__ == '__main__':
     app.run()

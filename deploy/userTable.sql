@@ -1,8 +1,8 @@
-CREATE TABLE COMPANY
+CREATE TABLE user
 (
-  ID      INT PRIMARY KEY     NOT NULL,
-  NAME    TEXT                NOT NULL,
-  AGE     INT                 NOT NULL,
-  ADDRESS CHAR(50),
-  SALARY  REAL
+  id      INT PRIMARY KEY     NOT NULL,
+  name    TEXT                NOT NULL,
+  age     INT                 NOT NULL,
+  message CHAR(50),
+  series  REAL
 )

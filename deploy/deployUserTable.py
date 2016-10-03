@@ -1,6 +1,14 @@
-def deploy_user():
-    print 'start deploy user db table'
+import sqlite3
 
+conn = sqlite3.connect('../data/user.db')
+print "Opened database successfully"
 
+conn.execute('''CREATE TABLE COMPANY
+       (ID INT PRIMARY KEY     NOT NULL,
+       NAME           TEXT    NOT NULL,
+       AGE            INT     NOT NULL,
+       ADDRESS        CHAR(50),
+       SALARY         REAL);''')
+print "Table created successfully"
 
-deploy_user()
+conn.close()

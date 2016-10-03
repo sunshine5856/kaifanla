@@ -1,6 +1,5 @@
 from run import app
-from flask import render_template
-from flask import request
+from flask import render_template, request
 
 
 @app.route('/manage/login', methods=['GET', 'POST'])
@@ -18,10 +17,10 @@ def login():
 
 
 @app.route('/manage/login/verity', methods=['GET', 'POST'])
-def hello_world():
+def verity():
     return 'Hello World!'
 
 
 @app.route('/manage/index', methods=['GET', 'POST'])
-def hello_world():
+def manage_index():
     return 'Hello World!'
