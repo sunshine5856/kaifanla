@@ -1,28 +1,26 @@
-import sqlite3
+from sqlalchemy import Table, Column, Integer, ForeignKey
+from sqlalchemy.orm import relationship, backref
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import *
+
+BaseModel = declarative_base()
 
 
-class User(object):
-    def __init__(self):
-        # self.user = 'root'
-        # self.password = 'password'
-        # self.database = 'user'
-        # self.host = '127.0.0.1'
-        # self.port = 3306
-        self.db = self.db_connect
-        self.cursor = self.db.cursor()
+def init_db ():
+    BaseModel.metadata.create_all(db)
 
-    @property
-    def db_connect(self):
-        connect = sqlite3.connect('../data/user.db')
-        print "Opened database successfully"
-        return connect
 
-    def add_user(self):
-        if self.db:
-            print 'exist'
-            self.db.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'California', 20000.00 )")
-        else:
-            print 'not exist'
+def drop_db ():
+    BaseModel.metadata.drop_all(db)
 
-# user = User()
-# user.add_user()
+
+class User(BaseModel):
+    __tablename__ = 'user'
+    id = Column(Integer, primary_key = True)
+    name = Column(CHAR(30))
+    password = Column(CHAR(30))
+
+
+if __name__ == "__main__":
+    init_db()
+    drop_db()
