@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html ng-app="kaifanla">
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>开饭啦</title>
+    <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/src/css/kaifanla.css"/>
 </head>
-<link href="/static/dist/test.css" rel="stylesheet">
-<body>
+<body ng-controller="parentCtr">
 {% block content %}
+
 {% endblock %}
 </body>
-<script src="/static/dist/test.js"></script>
+<script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/static/bower_components/bower-angularjs/angular.min.js"></script>
+<script src="/static/src/js/kaifanla.js"></script>
 </html>
+
