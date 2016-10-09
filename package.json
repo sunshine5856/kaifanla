@@ -1,0 +1,28 @@
+{
+  "name": "kanfanla",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python run.py",
+    "install:py:dep": "pip install -r requirements.txt",
+    "install:bower:dep": "bower install",
+    "install:node:dep": "npm install"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

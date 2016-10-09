@@ -1,5 +1,5 @@
 from run import app
-from model import user
+# from model import user
 from flask import make_response, session, request
 
 
